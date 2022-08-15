@@ -1,0 +1,16 @@
+<h1>teste 2</h1>
+<p><%=@question%></p>
+<p>- You</p>
+
+<div>
+<% if @question.include?('?')%>
+<p><%='Silly question, get dressed and go to work!'%></p>
+<% elsif @question == 'I am going to work'%>
+<p><%='Great!'%></p>
+<%else%>
+<p><%="I don't care, get dressed and go to work!"%></p>
+<%end%>
+<p>- Coach</p>
+</div>
+
+<%= link_to "Ask Again", ask_path %>
